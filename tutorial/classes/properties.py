@@ -1,4 +1,6 @@
-"""Getters and Setters"""
+"""
+Properties
+"""
 
 
 class Person:
@@ -15,6 +17,7 @@ class Person:
     def name(self, value):
         self._name = value.upper()
         raise Exception("Cannot change name!")
+
 
 person = Person("Cole", 28)
 print(person.name)

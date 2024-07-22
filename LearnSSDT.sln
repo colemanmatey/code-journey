@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35027.167
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LearnSSDT", "LearnSSDT\LearnSSDT.sqlproj", "{B206C5BB-605C-416D-9979-910EEAAE4225}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B206C5BB-605C-416D-9979-910EEAAE4225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B206C5BB-605C-416D-9979-910EEAAE4225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B206C5BB-605C-416D-9979-910EEAAE4225}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B206C5BB-605C-416D-9979-910EEAAE4225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B206C5BB-605C-416D-9979-910EEAAE4225}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B206C5BB-605C-416D-9979-910EEAAE4225}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94395FA8-2581-4F7B-A343-FBA813315BC7}
+	EndGlobalSection
+EndGlobal

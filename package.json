@@ -4,6 +4,8 @@
   "description": "Learning to build Express apps",
   "main": "index.js",
   "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/colemanmatey/code-journey/issues"
   },
-  "homepage": "https://github.com/colemanmatey/code-journey/tree/expressjs#readme"
+  "homepage": "https://github.com/colemanmatey/code-journey/tree/expressjs#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
 }

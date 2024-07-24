@@ -17,8 +17,13 @@ app.get("/about", (req, res) => {
 
 // Handling redirects
 app.get("/about-us", (req, res) => {
-    res.redirect('/about');
-})
+    res.redirect("/about");
+});
+
+// Handling a 404 page
+app.use((req, res) => {
+    res.status(404).sendFile("./views/404.html", { root: __dirname });
+});
 
 // Listen to port
 app.listen(port, () => {

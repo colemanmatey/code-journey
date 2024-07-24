@@ -8,7 +8,11 @@ const port = 8000;
 
 // Define home route
 app.get("/", (req, res) => {
-    res.send("<h1>Learning Express JS</h1>");
+    res.sendFile("./views/index.html", { root: __dirname });
+});
+
+app.get("/about", (req, res) => {
+    res.sendFile("./views/about.html", { root: __dirname });
 });
 
 // Listen to port

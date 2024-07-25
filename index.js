@@ -30,12 +30,14 @@ app.get("/about-us", (req, res) => {
 
 // Form handling
 app.post("/guest", (req, res) => {
-    const data = {
-        name: "John Doe",
-        email: "johndoe@company.com",
-        age: 30,
-        isMarried: true,
-    };
+    const data = [
+        {
+            name: "John Doe",
+            email: "johndoe@company.com",
+            age: 30,
+            isMarried: true,
+        },
+    ];
     res.render("guest", { title: "Guest", data: data });
 });
 

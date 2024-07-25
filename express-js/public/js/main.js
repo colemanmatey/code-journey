@@ -1,0 +1,3 @@
+// Script
+
+alert("Hello world!");

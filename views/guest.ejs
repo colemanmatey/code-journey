@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Express JS</title>
+    <title>Learning Express JS | <%= title %></title>
 </head>
 <body>
     <h1>Express JS</h1>
@@ -14,9 +14,11 @@
         <li><a href="/about">About</a></li>
     </nav>
 
-    <main class="content">
-        <h2><%= title %></h2>
-
+    <main class="content">  
+        <h2>Name: <%= data.name %></h2>
+        <p>Email: <%= data.email %></p>
+        <p>Age: <%= data.age %></p>
+        <p>Marital status: <%= data.isMarried %></p>
     </main>
 </body>
 </html>

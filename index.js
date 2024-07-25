@@ -1,6 +1,7 @@
 // Import modules
 const express = require("express");
 const path = require("path");
+const morgan = require("morgan");
 
 const app = express();
 
@@ -14,20 +15,8 @@ app.set("view engine", "ejs");
 // Set the views directory
 app.set("views", path.join(__dirname, "views"));
 
-// Log request to console
-app.use((req, res, next) => {
-    const date = new Date().toLocaleString();
-    const method = req.method;
-    const route = req.url;
-    const httpversion = req.httpVersion
-    const status = res.statusCode
-
-    // Log information to console
-    console.log(`[${date}] "${method} ${route} ${httpversion} ${status}"`);
-
-    // Pass control to next middleware
-    next(); 
-});
+// Use a logging middleware
+app.use(morgan("dev"));
 
 // Define Routes
 app.get("/", (req, res) => {

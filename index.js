@@ -1,18 +1,26 @@
-// Import express
+// Import modules
 const express = require("express");
+const path = require("path");
+
 const app = express();
 
 // Define hostname and port
 const host = "127.0.0.1";
 const port = 8000;
 
+// Set the view engine
+app.set("view engine", "ejs");
+
+// Set the views directory
+app.set("views", path.join(__dirname, "views"));
+
 // Define home route
 app.get("/", (req, res) => {
-    res.sendFile("./views/index.html", { root: __dirname });
+    res.render("index")
 });
 
 app.get("/about", (req, res) => {
-    res.sendFile("./views/about.html", { root: __dirname });
+    res.render("about")
 });
 
 // Handling redirects
@@ -22,7 +30,7 @@ app.get("/about-us", (req, res) => {
 
 // Handling a 404 page
 app.use((req, res) => {
-    res.status(404).sendFile("./views/404.html", { root: __dirname });
+    res.status(404).render("404")
 });
 
 // Listen to port

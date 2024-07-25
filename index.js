@@ -15,6 +15,9 @@ app.set("view engine", "ejs");
 // Set the views directory
 app.set("views", path.join(__dirname, "views"));
 
+// Serve static files
+app.use(express.static(path.join(__dirname, "public")))
+
 // Use a logging middleware
 app.use(morgan("dev"));
 

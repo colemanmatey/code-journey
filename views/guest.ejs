@@ -15,13 +15,25 @@
     </nav>
 
     <main class="content">
+        <!-- Using a for loop -->
         <% if (data.length > 0) { %>
             <% for (let i = 0; i < data.length; i++) { %>
-                <h2>Name: <%= data[i].name%></h2>
+                <h2><%= data[i].name%></h2>
                 <p>Email: <%= data[i].email %></p>
                 <p>Age: <%= data[i].age %></p>
                 <p>Marital status: <%= data[i].isMarried %></p>
             <% } %>
+        <% } %>
+
+
+        <!-- Using a forEach loop -->
+        <% if (data.length > 0) { %>
+            <% data.forEach(i => { %>
+                <h2><%= i.name%></h2>
+                <p>Email: <%= i.email %></p>
+                <p>Age: <%= i.age %></p>
+                <p>Marital status: <%= i.isMarried %></p>
+            <% }); %>
         <% } %>
     </main>
 </body>

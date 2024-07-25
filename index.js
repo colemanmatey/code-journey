@@ -16,11 +16,11 @@ app.set("views", path.join(__dirname, "views"));
 
 // Define home route
 app.get("/", (req, res) => {
-    res.render("index");
+    res.render("index", { title: "Homepage" });
 });
 
 app.get("/about", (req, res) => {
-    res.render("about");
+    res.render("about", { title: "About" });
 });
 
 // Handling redirects
@@ -29,13 +29,13 @@ app.get("/about-us", (req, res) => {
 });
 
 // Form handling
-app.post("/add-guest", (req, res) => {
-    res.send("Guest added");
+app.post("/guest", (req, res) => {
+    res.render("guest", { title: "Guest" });
 });
 
 // Handling a 404 page
 app.use((req, res) => {
-    res.status(404).render("404");
+    res.status(404).render("404", { title: "404" });
 });
 
 // Listen to port

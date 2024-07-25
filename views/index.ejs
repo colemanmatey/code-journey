@@ -15,13 +15,13 @@
     </nav>
 
     <main class="content">
-        <h2>Homepage</h2>
+        <h2><%= title %></h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quae.</p>
         <p>Do you want to know more? <a href="about-us">Click here!</a></p>
 
         <section>
             <h3>Tell me about yourself</h3>
-            <form name="form" action="/add-guest" method="post">
+            <form name="form" action="/guest" method="post">
                 <p>
                     <label for="firstname">Firstname:</label>
                     <input type="text" name="firstname" id="firstname">

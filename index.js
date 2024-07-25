@@ -37,6 +37,12 @@ app.post("/guest", (req, res) => {
             age: 30,
             isMarried: true,
         },
+        {
+            name: "Sarah Kepler",
+            email: "sarahkepler@company.com",
+            age: 27,
+            isMarried: false,
+        }     
     ];
     res.render("guest", { title: "Guest", data: data });
 });

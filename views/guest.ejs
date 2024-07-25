@@ -1,44 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning Express JS | <%= title %></title>
+    <%- include('./partials/head.ejs') %>
 </head>
 <body>
-    <h1>Express JS</h1>
-    <p>Building powerful backend applications</p>
+    <%- include('./partials/header.ejs') %>
+    <%- include('./partials/nav.ejs') %>
     
-    <nav>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-    </nav>
-
     <main class="content">
-        <!-- Using a for loop -->
-        <% if (data.length > 0) { %>
-            <% for (let i = 0; i < data.length; i++) { %>
-                <h2><%= data[i].name%></h2>
-                <p>Email: <%= data[i].email %></p>
-                <p>Age: <%= data[i].age %></p>
-                <p>Marital status: <%= data[i].isMarried %></p>
-            <% } %>
-        <% } else { %>
-            <p>No guests available</p>
-        <% } %>
-
-
-        <!-- Using a forEach loop -->
         <% if (data.length > 0) { %>
             <% data.forEach(i => { %>
-                <h2><%= i.name%></h2>
-                <p>Email: <%= i.email %></p>
+                <h2>ID: <%= i.id%></h2>
+                <p>Name: <%= i.name %></p>
                 <p>Age: <%= i.age %></p>
-                <p>Marital status: <%= i.isMarried %></p>
+                <p>Email: <%= i.email %></p>
+                <p>Occupation: <%= i.occupation %></p>
+                <p>City: <%= i.city %></p>
+                <p>Country: <%= i.country %></p>
             <% }); %>
         <% } else { %>
             <p>No guests available</p>
         <% } %>
     </main>
+
+    <%- include('./partials/footer.ejs') %>
 </body>
 </html>

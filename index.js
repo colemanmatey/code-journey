@@ -30,7 +30,53 @@ app.get("/about-us", (req, res) => {
 
 // Form handling
 app.post("/guest", (req, res) => {
-    const data = [];
+    const data = [
+        {
+          id: 1,
+          name: 'John Doe',
+          age: 30,
+          email: 'john.doe@example.com',
+          occupation: 'Software Engineer',
+          city: 'New York',
+          country: 'USA'
+        },
+        {
+          id: 2,
+          name: 'Jane Doe',
+          age: 25,
+          email: 'jane.doe@example.com',
+          occupation: 'Graphic Designer',
+          city: 'San Francisco',
+          country: 'USA'
+        },
+        {
+          id: 3,
+          name: 'Jim Smith',
+          age: 27,
+          email: 'jim.smith@example.com',
+          occupation: 'Product Manager',
+          city: 'Chicago',
+          country: 'USA'
+        },
+        {
+          id: 4,
+          name: 'Lisa Wong',
+          age: 32,
+          email: 'lisa.wong@example.com',
+          occupation: 'Data Scientist',
+          city: 'Seattle',
+          country: 'USA'
+        },
+        {
+          id: 5,
+          name: 'Tom Brown',
+          age: 29,
+          email: 'tom.brown@example.com',
+          occupation: 'DevOps Engineer',
+          city: 'Austin',
+          country: 'USA'
+        }
+      ];
     res.render("guest", { title: "Guest", data: data });
 });
 

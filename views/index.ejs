@@ -18,6 +18,27 @@
         <h2>Homepage</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, quae.</p>
         <p>Do you want to know more? <a href="about-us">Click here!</a></p>
+
+        <section>
+            <h3>Tell me about yourself</h3>
+            <form name="form" action="/add-guest" method="post">
+                <p>
+                    <label for="firstname">Firstname:</label>
+                    <input type="text" name="firstname" id="firstname">
+                </p>
+                <p>
+                    <label for="lastname">Lastname:</label>
+                    <input type="text" name="lastname" id="lastname">
+                </p>
+                <p>
+                    <label for="age">Age:</label>
+                    <input type="text" name="age" id="age">
+                </p>
+                <p>
+                    <input type="submit">
+                </p>
+            </form>
+        </section>
     </main>
 </body>
 </html>

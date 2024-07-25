@@ -1,0 +1,56 @@
+# SSDT project files
+*.dbmdl
+*.suo
+*.user
+*.userosscache
+*.ncb
+*.sdf
+*.opensdf
+
+# Ignore build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+
+# Ignore NuGet packages
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+# Ignore Visual Studio temporary files
+*.log
+*.vs/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.suo
+*.pdb
+
+# Ignore other build-related files
+*.cache
+*.csproj.user
+*.dll
+*.exe
+*.lib
+*.obj
+*.pdb
+*.tgz
+*.gz
+*.zip
+*.tar
+
+# Ignore deployment and database files
+*.dacpac
+*.bacpac
+*.biml
+*.bimldef
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+

@@ -2,7 +2,7 @@
 Unit tests for the `ToDo` module.
 """
 import datetime
-from todo.todo import ToDo, ToDoList, Repeat
+from todo.todo import ToDo, Repeat
 
 
 def test_todo_instantiation():

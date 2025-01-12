@@ -2,25 +2,16 @@
 The ToDo class
 """
 from datetime import date
-from enum import Enum, auto
 
-
-class Repeat(Enum):
-    NONE = auto()
-    DAILY = auto()
-    WEEKDAYS = auto()
-    WEEKLY = auto()
-    MONTHLY = auto()
-    QUARTERLY = auto()
-    YEARLY = auto()
-    CUSTOM = auto()
-
+from .enums import Repeat, Priority
 
 class ToDo:
-    def __init__(self, task, due, repeat=Repeat.NONE, note=""):
+    def __init__(self, task, due, priority=Priority.LOW, repeat=Repeat.NONE, is_complete=False, note=""):
         self.task = task
         self.due = due
+        self.priority = priority
         self.repeat = repeat
+        self.is_complete = is_complete
         self.note = note
 
     @property

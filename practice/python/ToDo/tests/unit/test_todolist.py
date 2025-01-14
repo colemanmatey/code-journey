@@ -1,8 +1,9 @@
 """
 Unit tests for the `ToDoList` module.
 """
+import datetime as dt
+
 import pytest  # type: ignore
-from datetime import date
 from todo.todolist import ToDoList
 
 
@@ -16,7 +17,7 @@ def test_todolist_instantiation(todolist):
 
 
 def test_todo_list_date_is_converted_to_date_object(todolist):
-    assert isinstance(todolist.date, date) == True
+    assert isinstance(todolist.date, dt.date) == True
 
 
 def test_new_todo_list_is_empty(todolist):

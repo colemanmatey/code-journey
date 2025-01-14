@@ -1,7 +1,7 @@
 """
 The ToDo class
 """
-from datetime import date
+import datetime as dt
 
 from .enums import Repeat, Priority
 
@@ -20,4 +20,7 @@ class ToDo:
 
     @due.setter
     def due(self, value):
-        self._due = date.fromisoformat(value)
+        try:
+            self._due = dt.date.fromisoformat(value)
+        except ValueError:
+            raise ValueError("Date did not match this format: YYYY-MM-DD")

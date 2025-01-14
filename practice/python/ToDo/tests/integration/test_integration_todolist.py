@@ -1,8 +1,8 @@
 """
 Integration tests for the `ToDoList` module.
 """
+import datetime as dt
 import pytest  # type: ignore
-from datetime import date
 
 from todo.todo import ToDo
 from todo.todolist import ToDoList
@@ -48,7 +48,7 @@ def test_edit_task_modifies_task_in_list(data):
     assert new_task in todolist.tasks
 
     assert new_task.task == 'Visit the spa'
-    assert new_task.due == date.fromisoformat("2025-01-11")
+    assert new_task.due == dt.date.fromisoformat("2025-01-11")
     assert new_task.repeat == Repeat.WEEKLY
     assert new_task.is_complete is True
     assert new_task.note == "Appointment at 3 PM"
@@ -64,7 +64,7 @@ def test_filter_returns_empty_list_when_no_condition_is_provided(data):
 
 def test_filter_tasks_by_due_date(data):
     _, task2, _, task4, todolist = data
-    filtered = todolist.filter(due=date.fromisoformat('2025-01-09'))
+    filtered = todolist.filter(due=dt.date.fromisoformat('2025-01-09'))
     assert len(filtered) == 2
     assert task2 in filtered
     assert task4 in filtered

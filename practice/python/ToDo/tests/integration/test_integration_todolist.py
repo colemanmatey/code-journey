@@ -11,10 +11,14 @@ from todo.enums import Repeat, Priority
 
 @pytest.fixture
 def data():
-    task1 = ToDo(task='Visit the salon', due='2025-01-08', repeat=Repeat.DAILY, note="", is_complete=False)
-    task2 = ToDo(task='Buy groceries', due='2025-01-09', repeat=Repeat.DAILY, note="Milk, eggs", is_complete=False)
-    task3 = ToDo(task='Finish Python project', due='2025-01-12', repeat=Repeat.WEEKLY, note="Complete the tests", is_complete=True)
-    task4 = ToDo(task='Clean the house', due='2025-01-09', repeat=Repeat.MONTHLY, note="", is_complete=False)
+    task1 = ToDo(task='Visit the salon', due='2025-01-08',
+                 repeat=Repeat.DAILY, note="", is_complete=False)
+    task2 = ToDo(task='Buy groceries', due='2025-01-09',
+                 repeat=Repeat.DAILY, note="Milk, eggs", is_complete=False)
+    task3 = ToDo(task='Finish Python project', due='2025-01-12',
+                 repeat=Repeat.WEEKLY, note="Complete the tests", is_complete=True)
+    task4 = ToDo(task='Clean the house', due='2025-01-09',
+                 repeat=Repeat.MONTHLY, note="", is_complete=False)
 
     todolist = ToDoList(title="Weekend chores", date="2925-01-09")
     todolist.add(task1)
@@ -26,7 +30,8 @@ def data():
 
 
 def test_add_item_to_todo_list(data):
-    task5 = ToDo(task='Learn Geography', due='2025-01-19', repeat=Repeat.DAILY, note="", is_complete=False)
+    task5 = ToDo(task='Learn Geography', due='2025-01-19',
+                 repeat=Repeat.DAILY, note="", is_complete=False)
     _, _, _, _, todolist = data
     todolist.add(task5)
     assert task5 in todolist.tasks
@@ -41,7 +46,8 @@ def test_delete_task_from_todo_list(data):
 
 def test_edit_task_modifies_task_in_list(data):
     task1, _, _, _, todolist = data
-    new_task = ToDo(task='Visit the spa', due='2025-01-11', repeat=Repeat.WEEKLY, note="Appointment at 3 PM", is_complete=True)
+    new_task = ToDo(task='Visit the spa', due='2025-01-11',
+                    repeat=Repeat.WEEKLY, note="Appointment at 3 PM", is_complete=True)
     todolist.edit(task1, new_task)
 
     assert task1 not in todolist.tasks
@@ -53,6 +59,7 @@ def test_edit_task_modifies_task_in_list(data):
     assert new_task.is_complete is True
     assert new_task.note == "Appointment at 3 PM"
 
+
 def test_filter_returns_empty_list_when_no_condition_is_provided(data):
     task1, task2, task3, task4, todolist = data
     filtered = todolist.filter()
@@ -61,6 +68,7 @@ def test_filter_returns_empty_list_when_no_condition_is_provided(data):
     assert task2 not in filtered
     assert task3 not in filtered
     assert task4 not in filtered
+
 
 def test_filter_tasks_by_due_date(data):
     _, task2, _, task4, todolist = data

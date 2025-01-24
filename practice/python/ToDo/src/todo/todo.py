@@ -5,6 +5,7 @@ import datetime as dt
 
 from .enums import Repeat, Priority
 
+
 class ToDo:
     def __init__(self, task, due, priority=Priority.LOW, repeat=Repeat.NONE, is_complete=False, note=""):
         self.task = task

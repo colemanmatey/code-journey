@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import './App.css'
-import NASA from './components/NASA';
+import MovieCard from './components/MovieCard';
 
 function App() {
 
 	const [data, setData] = useState(null);	
 
 	useEffect(() => {
-		fetch("http://127.0.0.1:8000/api/data")
-			.then(response => response.json())
+		fetch("http://127.0.0.1:8000/data/movies/all")
+			.then(res => res.json())
 			.then(data => setData(data))
 			.catch(error => console.error("Error fetching data:", error));
 	}, []);
@@ -17,7 +17,13 @@ function App() {
 	return (
 		<div>
 			<h1>MovieApp</h1>
-			{data ? <NASA data={data} /> : <p>Loading...</p>}
+			{
+				data ? 
+				data.map((movie) => (
+					<MovieCard movie={ movie } />
+				)) :
+				<p>Loading...</p>
+			}
 		</div>
 	)
 }

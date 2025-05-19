@@ -1,4 +1,7 @@
-﻿namespace OOP
+﻿using OOP.Animals;
+using OOP.Food;
+
+namespace OOP
 {
     internal class Program
     {
@@ -38,7 +41,36 @@
             hamster.BeFriendly();
 
             Cat cat = new Cat("Dore", 2);
-            Console.WriteLine($"My name is {cat.Name}. When I reflect, I {cat.SelfReflect()}");
+            Console.WriteLine($"My name is {cat.Name}. When I reflect, I {cat.SelfReflect()}\n\n");
+
+
+            // INHERITANCE
+            Console.WriteLine("INHERITANCE\n------------");
+
+            // Customers
+            Customer peter = new Customer();
+            Customer sandra = new Customer();
+            
+
+            // Restaurants
+            MexicanRestaurant sobeys = new MexicanRestaurant(); // specific class instantiation
+            ChineseRestaurant chinabowl = new ChineseRestaurant(); // specific class instantiation
+
+            Restaurant pizzorama = new ItalianRestaurant(); // base class reference
+            Restaurant papaye = new GhanaianRestaurant(); // base class reference
+
+            // Orders
+            peter.MakeOrder(sobeys, "Tacos");
+            sandra.MakeOrder(chinabowl, "Ramen");
+
+            peter.MakeOrder(pizzorama, "Pizza");
+            sandra.MakeOrder(papaye, "Jollof Rice");
+
+            NigerianRestaurant obolu = new NigerianRestaurant(); // uses default implementation of ServeDish() in base class 
+            peter.MakeOrder(obolu, "Champagne");
+
+
+
         }
     }
 }

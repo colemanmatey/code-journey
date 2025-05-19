@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP
+namespace OOP.Animals
 {
     internal class Animal
     {
@@ -20,8 +20,8 @@ namespace OOP
         public Animal() { }
         public Animal(string name, int age) // setting inherited fields to values during instantiation
         {
-            this.Name = name;
-            this.Age = age;
+            Name = name;
+            Age = age;
         }
 
         public string MakeSound()

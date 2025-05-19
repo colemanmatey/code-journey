@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP
+namespace OOP.Animals
 {
     internal sealed class Cat : Animal // Restricts any inheritance from the Cat class
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOP
+namespace OOP.Animals
 {
     internal abstract class Pet // Cannot be instantiated
     {

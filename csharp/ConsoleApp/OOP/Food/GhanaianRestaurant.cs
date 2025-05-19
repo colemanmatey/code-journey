@@ -8,9 +8,14 @@ namespace OOP.Food
 {
     internal class GhanaianRestaurant : Restaurant
     {
+        public override string ToString()
+        {
+            return "Ghanaian";
+        }
+
         public override void ServeDish(string dish)
         {
-            Console.WriteLine($"We serve the best of Ghanaian {dish}!\n");
+            Console.WriteLine($"We serve the best of Ghanaian {dish}!");
         }
     }
 }

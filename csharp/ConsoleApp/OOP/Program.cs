@@ -44,30 +44,33 @@ namespace OOP
             Console.WriteLine($"My name is {cat.Name}. When I reflect, I {cat.SelfReflect()}\n\n");
 
 
-            // INHERITANCE
+            // ABSTRACT CLASSES
             Console.WriteLine("INHERITANCE\n------------");
 
             // Customers
             Customer peter = new Customer();
             Customer sandra = new Customer();
             
-
             // Restaurants
             MexicanRestaurant sobeys = new MexicanRestaurant(); // specific class instantiation
             ChineseRestaurant chinabowl = new ChineseRestaurant(); // specific class instantiation
+            NigerianRestaurant obolu = new NigerianRestaurant(); // specific class instantiation
 
             Restaurant pizzorama = new ItalianRestaurant(); // base class reference
             Restaurant papaye = new GhanaianRestaurant(); // base class reference
 
+            // Open restaurants
+            chinabowl.IsOpen = true;
+            obolu.IsOpen = true;
+
             // Orders
-            peter.MakeOrder(sobeys, "Tacos");
-            sandra.MakeOrder(chinabowl, "Ramen");
+            peter.MakeOrder(sobeys, "Tacos", "Apple juice");
+            sandra.MakeOrder(chinabowl, "Ramen", "Champagne");
 
-            peter.MakeOrder(pizzorama, "Pizza");
-            sandra.MakeOrder(papaye, "Jollof Rice");
+            peter.MakeOrder(pizzorama, "Pizza", "Pepsi");
+            sandra.MakeOrder(papaye, "Jollof Rice", "Jack Daniels");
 
-            NigerianRestaurant obolu = new NigerianRestaurant(); // uses default implementation of ServeDish() in base class 
-            peter.MakeOrder(obolu, "Champagne");
+            peter.MakeOrder(obolu, "Egusi soup", "Beer");
 
 
 

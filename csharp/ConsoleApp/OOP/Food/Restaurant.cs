@@ -6,11 +6,24 @@ using System.Threading.Tasks;
 
 namespace OOP.Food
 {
-    internal class Restaurant
+    internal abstract class Restaurant : IRestaurant
     {
-        public virtual void ServeDish(string dish) // default implementation of ServeDish()
+        public bool IsOpen { get; set; } = false;
+
+        public override string ToString()
         {
-            Console.WriteLine($"We serve your {dish} with a smile\n");
+            return "Restaurant";
+        }
+
+        // arrow syntax to define simple function body
+        public void OpenRestaurant() => IsOpen = true;
+        public void CloseRestaurant() => IsOpen = false;
+
+        public abstract void ServeDish(string dish); // must be implemented by all its derived classes
+
+        public virtual void ServeDrink(string drink) // a default behaviour that can be optionally overriden by a derived class
+        {
+            Console.WriteLine($"We give you the best {drink} you have ever tasted\n");
         }
     }
 }

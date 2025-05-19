@@ -10,7 +10,7 @@ namespace OOP.Food
     {
         public override string ToString()
         {
-            return "Mexican";
+            return "Mexican Restaurant";
         }
 
         public override void ServeDish(string dish)

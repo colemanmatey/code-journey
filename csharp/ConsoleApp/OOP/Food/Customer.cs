@@ -17,7 +17,7 @@ namespace OOP.Food
             } 
             else
             {
-                Console.WriteLine($"The {restaurant.ToString()} restaurant is closed at the moment\n");
+                Console.WriteLine($"Sorry, you cannot place an order at the {restaurant.ToString()} right now\n");
             }
         }
     }

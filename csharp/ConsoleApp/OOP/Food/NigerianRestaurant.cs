@@ -10,7 +10,7 @@ namespace OOP.Food
     {
         public override string ToString()
         {
-            return "Nigerian";
+            return "Nigerian Restaurant";
         }
 
         public override void ServeDish(string dish)
@@ -20,7 +20,7 @@ namespace OOP.Food
 
         public override void ServeDrink(string drink) // overrides the default behaviour in base class
         {
-            Console.WriteLine($"We give you the best Nigerian {drink} you have ever tasted\n");
+            Console.WriteLine($"We give you the best {ToString()} {drink} you have ever tasted\n");
         }
     }
 }

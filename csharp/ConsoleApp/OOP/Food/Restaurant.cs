@@ -8,7 +8,11 @@ namespace OOP.Food
 {
     internal abstract class Restaurant : IRestaurant
     {
+        public abstract string Cuisine { get; set; }
+
         public bool IsOpen { get; set; } = false;
+
+        public readonly Messaging messaging = new Messaging();
 
         public override string ToString()
         {

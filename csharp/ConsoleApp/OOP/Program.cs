@@ -44,7 +44,7 @@ namespace OOP
             Console.WriteLine($"My name is {cat.Name}. When I reflect, I {cat.SelfReflect()}\n\n");
 
 
-            // ABSTRACT CLASSES
+            // INHERITANCE
             Console.WriteLine("INHERITANCE\n------------");
 
             // Customers
@@ -65,12 +65,12 @@ namespace OOP
 
             // Orders
             peter.MakeOrder(sobeys, "Tacos", "Apple juice");
-            sandra.MakeOrder(chinabowl, "Ramen", "Champagne");
+            peter.MakeOrder(chinabowl, "Ramen", "Champagne");
+            peter.MakeOrder(obolu, "Egusi soup", "Beer");
 
-            peter.MakeOrder(pizzorama, "Pizza", "Pepsi");
+            sandra.MakeOrder(pizzorama, "Pizza", "Pepsi");
             sandra.MakeOrder(papaye, "Jollof Rice", "Jack Daniels");
 
-            peter.MakeOrder(obolu, "Egusi soup", "Beer");
 
 
 

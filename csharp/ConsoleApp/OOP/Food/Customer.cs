@@ -8,6 +8,7 @@ namespace OOP.Food
 {
     internal class Customer
     {
+        public readonly Messaging messaging = new Messaging();
         public void MakeOrder(Restaurant restaurant, string dish, string drink) // restaurant can be any type of restaurant
         {
             if (restaurant.IsOpen)
@@ -17,7 +18,7 @@ namespace OOP.Food
             } 
             else
             {
-                Console.WriteLine($"Sorry, you cannot place an order at the {restaurant.ToString()} right now\n");
+                Console.WriteLine(messaging.RestaurantNotOpen(restaurant));
             }
         }
     }

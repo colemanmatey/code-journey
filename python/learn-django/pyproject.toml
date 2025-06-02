@@ -1,0 +1,21 @@
+[project]
+name = "learn-django"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Coleman Matey",email = "113218526+colemanmatey@users.noreply.github.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "django (>=5.2.1,<6.0.0)",
+    "python-decouple (>=3.8,<4.0)"
+]
+
+[tool.poetry]
+packages = [{include = "core", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

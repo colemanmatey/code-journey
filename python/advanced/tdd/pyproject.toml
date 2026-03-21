@@ -1,0 +1,34 @@
+[project]
+name = "tdd"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Coleman Matey", email = "colemanmatey@outlook.com" }
+]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+tdd = "tdd:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[dependency-groups]
+dev = [
+    "flake8>=7.3.0",
+    "mypy>=1.19.1",
+    "pytest>=9.0.2",
+    "pytest-cov>=7.0.0",
+    "tox>=4.50.3",
+]
+
+[tool.tox]
+env_list = ["py310", "py311", "py312", "py313", "py314"]
+skip_missing_interpreters = true
+
+[tool.tox.env_run_base]
+dependency_groups = ["dev"]
+commands = [["pytest"]]
